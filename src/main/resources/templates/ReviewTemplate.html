@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Muscle Cars</title>
+    <link rel="stylesheet" type="text/css" href="./css/homestyle.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Dodge Muscle</h1>
+</header>
+
+<div class="container">
+    <main>
+
+        <p th:each="review: ${reviewsModel}"><a th:href="@{/review(id=${review.id})}"> <img
+                th:src="${review.imageUrl}"></a>
+        </p>
+
+    </main>
+
+</div>
+
+<footer>
+    <small>Kenny WCCI 2020</small>
+</footer>
+
+</body>
+
+</html>
